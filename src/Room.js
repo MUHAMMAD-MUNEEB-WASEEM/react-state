@@ -50,26 +50,47 @@ function Room() {
     //   setAge(++age);//Incrementing age
     // }
 
+    let [temp, setTemp] = useState(72);
+
   return (
     //for first part
     //below in div starting tag, we have pass the className property and it works
     //as;we have pass to classes, room and islit, room work in any situation whereas
     //when isLit become lit, then it use .lit class from room.css and when islit
     //becomes dark, then it uses .dark class,
-    //this is called template string
-    <div className={`room ${isLit ? "lit" : "dark"}`}>
-        <p>This Room is {isLit ? 'lit' : 'dark'} </p>
-        <button onClick={updatelit}>toggle lit</button>
 
-        <p>This age is {age} </p>
-        <button onClick={() => setAge(++age)}>toggle Age</button>
+    //second part
+    //it consist of my age text and button that uses function that consist [age,setAge] = usestate(20) and
+    //increaments age by 1 upon clicking on it, we use setAge function to modify the value of age 
+
+    //third part
+    //it consist of object [temp, setTemp] = usestate(72) and two button, one for increasing the temperature and
+    //other for decreasing the temperature by using setTemp(++temp) and setTemp(--temps
+  
+    //this is called template string
+   <div className={`room ${isLit ? "lit" : "dark"}`}>
+        
+        <p>This Room is {isLit ? 'lit' : 'dark'} </p>
+        <button onClick={updatelit}>Toggle lit</button>
+        <p>To be specific</p>
+  
+        <button onClick={() => setLit(true)} className="on-off">Turn On</button> 
+        <button onClick={() => setLit(false)}>Turn Off</button> 
+ 
+
+        <p>My age is {age} </p>
+        <button onClick={() => setAge(++age)}>Toggle Age</button>
+
+        
+        <p>The current temperature is: {temp}</p>
+        <button onClick={() => setTemp(++temp)}>+</button>
+        <button onClick={() => setTemp(--temp)}>-</button>
         
     </div>
     // {isLit ? 'lit' : 'dark'} it checks isLit and for true false check ?
     //true then return lit otherwise dark
     //button, use to update value by using onclick event
-
-    //second para for second part
+    
     //end
   );
 }
