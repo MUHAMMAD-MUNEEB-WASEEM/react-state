@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Room.css';
 
 
 function Room() {
@@ -51,7 +52,12 @@ function Room() {
 
   return (
     //for first part
-    <div>
+    //below in div starting tag, we have pass the className property and it works
+    //as;we have pass to classes, room and islit, room work in any situation whereas
+    //when isLit become lit, then it use .lit class from room.css and when islit
+    //becomes dark, then it uses .dark class,
+    //this is called template string
+    <div className={`room ${isLit ? "lit" : "dark"}`}>
         <p>This Room is {isLit ? 'lit' : 'dark'} </p>
         <button onClick={updatelit}>toggle lit</button>
 
