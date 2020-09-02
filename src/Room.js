@@ -44,7 +44,7 @@ function Room() {
     //another way as you can see in return function
     //() => //this part is in place of function ()
     //and we write return in a single line
-    
+
     // function increaseAge() {
     //   setAge(++age);//Incrementing age
     // }
@@ -64,6 +64,7 @@ function Room() {
     //button, use to update value by using onclick event
 
     //second para for second part
+    //end
   );
 }
 
