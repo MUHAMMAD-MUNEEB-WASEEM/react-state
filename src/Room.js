@@ -52,7 +52,6 @@ function Room() {
 
     let [temp, setTemp] = useState(72);
 
-  return (
     //for first part
     //below in div starting tag, we have pass the className property and it works
     //as;we have pass to classes, room and islit, room work in any situation whereas
@@ -68,6 +67,9 @@ function Room() {
     //other for decreasing the temperature by using setTemp(++temp) and setTemp(--temps
   
     //this is called template string
+
+  return (
+
    <div className={`room ${isLit ? "lit" : "dark"}`}>
         
         <p>This Room is {isLit ? 'lit' : 'dark'} </p>
@@ -87,12 +89,13 @@ function Room() {
         <button onClick={() => setTemp(--temp)}>-</button>
         
     </div>
+  );
+}
+
     // {isLit ? 'lit' : 'dark'} it checks isLit and for true false check ?
     //true then return lit otherwise dark
     //button, use to update value by using onclick event
-    
+
     //end
-  );
-}
 
 export default Room;
